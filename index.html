@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script src="app.js" type="module"></script>
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
@@ -37,33 +37,49 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body px-4">
-                        <form action="" id="addPet" class="needs-validation">
+                        <form action="" id="addPet" class="needs-validation" novalidate>
                             <div class="form-group">
                                 <label for="name">Pet name:</label>
-                                <input type="text" id="name" required>
+                                <input type="text" id="name" class="form-control" required>
                                 <div class="invalid-feedback">
-                                    Please provide a username between 3 and 15 characters.
+                                    Please insert a name.
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="description">Description:</label>
-                                <textarea name="description" id="description"></textarea>
+                                <textarea name="description" id="description" class="form-control" required></textarea>
+                                <div class="invalid-feedback">
+                                    Please insert a description.
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="imageURL">Image URL:</label>
-                                <input type="text" name="imageURL" id="imageURL"></input>
+                                <input type="text" name="imageURL" id="imageURL" class="form-control" required></input>
+                                <div class="invalid-feedback">
+                                    Please insert a valid URL.
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="birthdate">Birthdate:</label>
-                                <input type="date" name="birthdate" id="birthdate"></input>
+                                <input type="date" name="birthdate" id="birthdate" class="form-control"
+                                    required></input>
+                                <div class="invalid-feedback">
+                                    Please insert a birthdate.
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="price">Price:</label>
-                                <input type="number" name="price" id="price"></input>
+                                <input type="number" name="price" id="price" class="form-control" required></input>
+                                <div class="invalid-feedback">
+                                    Please insert a price.
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="petCode">Pet Code:</label>
-                                <input type="text" name="petCode" id="petCode"></input>
+                                <input type="text" name="petCode" id="petCode" class="form-control" required></input>
+                                <div class="invalid-feedback">
+                                    Please insert a pet code.
+                                </div>
                             </div>
                             <div class="form-group sold-group">
                                 <label for="sold">Sold:</label>
@@ -89,9 +105,8 @@
         (function () {
             'use strict';
             var forms = document.querySelectorAll('.needs-validation');
-            console.log(forms);
-
             Array.prototype.slice.call(forms).forEach(function (form) {
+
                 form.addEventListener('submit', function (event) {
                     // HTML5 validation
                     if (!form.checkValidity()) {
@@ -99,13 +114,44 @@
                         event.stopPropagation();
                     }
 
-                    // Custom validation for password match
-                    var password = document.getElementById('password');
-                    var confirmPassword = document.getElementById('confirmPassword');
-                    if (password.value !== confirmPassword.value) {
-                        confirmPassword.setCustomValidity('Passwords do not match.');
+                    //Birthdate validation
+                    let birthdayInput = document.getElementById('birthdate');
+                    let birthdayInputValue = Date.parse(birthdayInput.value);
+
+                    if (Date.now() - birthdayInputValue < 0) {
+                        birthdayInput.setCustomValidity('Needs to be a past date.');
+                        const validationMessage = document.querySelector('#birthdate + div');
+
+                        validationMessage.textContent = "Needs to be a past date.";
+
                     } else {
-                        confirmPassword.setCustomValidity('');
+                        birthdayInput.setCustomValidity('');
+                    }
+
+                    //Price validation
+                    const priceInput = document.getElementById('price');
+                    if (priceInput.value < 0) {
+                        priceInput.setCustomValidity('Price needs to be bigger than 0.');
+                        const validationMessage = document.querySelector('#price + div');
+                        validationMessage.textContent = "Price needs to be bigger than 0.";
+
+                    } else {
+                        priceInput.setCustomValidity('');
+                    }
+
+                    //Petcode validation
+                    const petcodeInput = document.getElementById('petCode');
+                    const regEx = /^[a-z]{3}\d{3}$/i;
+
+                    console.log(regEx.test(petcodeInput.value));
+
+                    if (!regEx.test(petcodeInput.value)) {
+                        petcodeInput.setCustomValidity('Pet code needs to be 3 letters follow by 3 numbers.');
+                        const validationMessage = document.querySelector('#petCode + div');
+                        validationMessage.textContent = "Pet code needs to be 3 letters follow by 3 numbers.";
+
+                    } else {
+                        petcodeInput.setCustomValidity('');
                     }
 
                     // Add Bootstrap validation classes
