@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  #pet-form-section, #pet-list-section {
+    margin: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  input, textarea, button {
+    margin-top: 5px;
+    display: block;
+  }
+  
+  #petList {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .pet-profile {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  .pet-profile img {
+    max-width: 100px;
+    max-height: 100px;
+    display: block;
+  }
+  
+  .sold-badge {
+    background-color: red;
+    color: white;
+    padding: 5px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
