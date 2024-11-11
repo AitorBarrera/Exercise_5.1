@@ -24,8 +24,6 @@ export default class PetsCollection{
     }
 
     editPet(editedPet){
-        console.log(this.pets);
-        
         const searchedPetCode = editedPet.code;
 
         this.pets.forEach(pet =>{

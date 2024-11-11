@@ -110,7 +110,7 @@ buttonForm.addEventListener("click", function (event) {
 
         petList.addPet(newPet);
         resetForm(form);
-        autofillForm(form);
+        // autofillForm(form);
         renderPets(petList.pets);
         
         //Close modal windows;
@@ -120,7 +120,7 @@ buttonForm.addEventListener("click", function (event) {
 })
 
 //Testing
-    autofillForm(form);
+// autofillForm(form);
 
 // Declaring inicial pet list
 let petsDefault = [

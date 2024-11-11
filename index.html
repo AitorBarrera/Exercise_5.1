@@ -3,7 +3,6 @@
 
 <head>
     <title>Pet list</title>
-    <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
@@ -27,12 +26,13 @@
         integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="h-100">
     <header>
         <div class="d-flex justify-content-between p-3 bg-black align-items-center">
             <h2 class="text-warning text-center m-0">Pet List</h2>
-            <button id="modalToggle" type="button" class="btn btn-warning btn-lg" data-bs-toggle="modal" data-bs-target="#modalWindown">
-                Add or modify pets
+            <button id="modalToggle" type="button" class="btn btn-warning btn-lg" data-bs-toggle="modal"
+                data-bs-target="#modalWindown">
+                Add new pet
             </button>
         </div>
     </header>
@@ -44,8 +44,7 @@
                         <div class="row g-0 h-100">
                             <div class="position-relative d-flex align-items-center">
                                 <img src="https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1xw:0.99967xh;center,top&resize=1200:*"
-                                    class="imageURLCard rounded-start w-100 z-1 img-fluid"
-                                    alt="Card title" />
+                                    class="imageURLCard rounded-start w-100 z-1 img-fluid" alt="Card title" />
                                 <div
                                     class="soldTitle h-100 w-100 position-absolute z-2 m-0 bottom-0 d-flex align-items-center justify-content-center">
                                     <p class="bg-dark px-3 py-1 m-0 rounded-5">SOLD</p>
@@ -54,21 +53,30 @@
                             <div class="col-md-12">
                                 <div class="card-body">
                                     <h5 class="card-title nameCard">Asaas</h5>
-                                    <p class="card-text descriptionCard">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam officia corporis quis labore velit, repellendus dolores dolorem ducimus eius facere exercitationem natus! Nobis eligendi alias consequuntur officiis odit minus voluptatibus!
+                                    <p class="card-text descriptionCard">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Ullam officia corporis quis labore velit, repellendus dolores
+                                        dolorem ducimus eius facere exercitationem natus! Nobis eligendi alias
+                                        consequuntur officiis odit minus voluptatibus!
                                     </p>
                                     <p>
-                                        Price: <span class="priceCard">21</span> 
+                                        Price: <span class="priceCard">21</span>
                                     </p>
                                     <div class="card-text d-flex justify-content-between">
                                         <small class="text-muted">Birthdate: 22/02/2011<span id="birthdateCard"></span>
                                         </small>
                                         <div class="icons">
-                                            <a href="#" data-id="" id="soldIcon" class="ms-2 text-dark"><i class="fa fa-dollar-sign" aria-hidden="true"></i></a>
-                                            <a href="#" data-id="" id="editIcon" class="ms-2 text-dark"><i class="fa fa-edit" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#modalEditPet"></i></a>
-                                            <a href="#" data-id="" id="deleteIcon" class="ms-2 text-dark"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                            <a href="#" data-id="" id="soldIcon" class="ms-2 text-dark"><i
+                                                    class="fa fa-dollar-sign" aria-hidden="true"></i></a>
+                                            <a href="#" data-id="" id="editIcon" class="ms-2 text-dark"><i
+                                                    class="fa fa-edit" aria-hidden="true" data-bs-toggle="modal"
+                                                    data-bs-target="#modalEditPet"></i></a>
+                                            <a href="#" data-id="" id="deleteIcon" class="ms-2 text-dark"><i
+                                                    class="fa fa-trash" aria-hidden="true"></i></a>
                                         </div>
                                     </div>
-                                    <span class="petCodeCard position-absolute top-0 end-0 p-2 z-3 bg-dark text-warning rounded-start-1" style="--bs-bg-opacity: .5;"></span>
+                                    <span
+                                        class="petCodeCard position-absolute top-0 end-0 p-2 z-3 bg-dark text-warning rounded-start-1"
+                                        style="--bs-bg-opacity: .5;"></span>
                                 </div>
                             </div>
                         </div>
@@ -79,8 +87,7 @@
                         <div class="row g-0 h-100">
                             <div class="position-relative d-flex align-items-center">
                                 <img src="https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1xw:0.99967xh;center,top&resize=1200:*"
-                                    class="imageURLCard rounded-start w-100 z-1 img-fluid"
-                                    alt="Card title" />
+                                    class="imageURLCard rounded-start w-100 z-1 img-fluid" alt="Card title" />
                                 <div
                                     class="soldTitle h-100 w-100 position-absolute z-2 m-0 bottom-0 d-flex align-items-center justify-content-center">
                                     <p class="bg-dark px-3 py-1 m-0 rounded-5">SOLD</p>
@@ -89,21 +96,29 @@
                             <div class="col-md-12">
                                 <div class="card-body">
                                     <h5 class="card-title nameCard">Asaas</h5>
-                                    <p class="card-text descriptionCard">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eligendi alias consequuntur officiis odit minus voluptatibus!
+                                    <p class="card-text descriptionCard">Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Nobis eligendi alias consequuntur officiis odit minus
+                                        voluptatibus!
                                     </p>
                                     <p>
-                                        Price: <span class="priceCard">21</span> 
+                                        Price: <span class="priceCard">21</span>
                                     </p>
                                     <div class="card-text d-flex justify-content-between">
                                         <small class="text-muted">Birthdate: 22/02/2011<span id="birthdateCard"></span>
                                         </small>
                                         <div class="icons">
-                                            <a href="#" data-id="" id="soldIcon" class="ms-2 text-dark"><i class="fa fa-dollar-sign" aria-hidden="true"></i></a>
-                                            <a href="#" data-id="" id="editIcon" class="ms-2 text-dark"><i class="fa fa-edit" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#modalEditPet"></i></a>
-                                            <a href="#" data-id="" id="deleteIcon" class="ms-2 text-dark"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                            <a href="#" data-id="" id="soldIcon" class="ms-2 text-dark"><i
+                                                    class="fa fa-dollar-sign" aria-hidden="true"></i></a>
+                                            <a href="#" data-id="" id="editIcon" class="ms-2 text-dark"><i
+                                                    class="fa fa-edit" aria-hidden="true" data-bs-toggle="modal"
+                                                    data-bs-target="#modalEditPet"></i></a>
+                                            <a href="#" data-id="" id="deleteIcon" class="ms-2 text-dark"><i
+                                                    class="fa fa-trash" aria-hidden="true"></i></a>
                                         </div>
                                     </div>
-                                    <span class="petCodeCard position-absolute top-0 end-0 p-2 z-3 bg-dark text-warning rounded-start-1" style="--bs-bg-opacity: .5;"></span>
+                                    <span
+                                        class="petCodeCard position-absolute top-0 end-0 p-2 z-3 bg-dark text-warning rounded-start-1"
+                                        style="--bs-bg-opacity: .5;"></span>
                                 </div>
                             </div>
                         </div>
@@ -121,13 +136,15 @@
                         <h5 class="modal-title" id="modalTitleId">
                             New Pet
                         </h5>
-                        <button type="button"  id="buttonCloseModalAdd" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" id="buttonCloseModalAdd" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
                     <div class="modal-body px-4">
                         <form action="" id="addPet" class="needs-validation" novalidate>
                             <div class="form-group">
                                 <label for="petCode">Pet Code:</label>
-                                <input type="text" name="petCode" id="petCode" class="form-control" placeholder=" " required></input>
+                                <input type="text" name="petCode" id="petCode" class="form-control" placeholder=" "
+                                    required></input>
                                 <div class="invalid-feedback">
                                     Please insert a pet code.
                                 </div>
@@ -141,7 +158,8 @@
                             </div>
                             <div class="form-group">
                                 <label for="description">Description:</label>
-                                <textarea name="description" id="description" rows="4" class="form-control" required></textarea>
+                                <textarea name="description" id="description" rows="4" class="form-control"
+                                    required></textarea>
                                 <div class="invalid-feedback">
                                     Please insert a description.
                                 </div>
@@ -163,7 +181,8 @@
                             </div>
                             <div class="form-group">
                                 <label for="price">Price:</label>
-                                <input type="number" step=".01" name="price" id="price" class="form-control" required></input>
+                                <input type="number" step=".01" name="price" id="price" class="form-control"
+                                    required></input>
                                 <div class="invalid-feedback">
                                     Please insert a price.
                                 </div>
@@ -180,7 +199,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Modal windows to edit pets -->
         <div class="modal fade" id="modalEditPet" tabindex="-1" role="dialog" aria-labelledby="modalEditPet"
             aria-hidden="true">
@@ -190,13 +209,15 @@
                         <h5 class="modal-title" id="modalTitleId">
                             Edit Pet: <span id="petNameEditForm"></span> (<span id="petCodeEditForm"></span>)
                         </h5>
-                        <button type="button" id="buttonCloseModalEdit" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" id="buttonCloseModalEdit" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
                     <div class="modal-body px-4">
                         <form action="" id="editPet" class="needs-validation" novalidate>
                             <div class="form-group">
                                 <label for="petCode">Pet Code:</label>
-                                <input type="text" name="petCode" id="petCode" class="form-control" disabled required></input>
+                                <input type="text" name="petCode" id="petCode" class="form-control" disabled
+                                    required></input>
                                 <div class="invalid-feedback">
                                     Please insert a pet code.
                                 </div>
@@ -210,7 +231,8 @@
                             </div>
                             <div class="form-group">
                                 <label for="description">Description:</label>
-                                <textarea name="description" id="description" rows="4"  class="form-control" required></textarea>
+                                <textarea name="description" id="description" rows="4" class="form-control"
+                                    required></textarea>
                                 <div class="invalid-feedback">
                                     Please insert a description.
                                 </div>
@@ -232,7 +254,8 @@
                             </div>
                             <div class="form-group">
                                 <label for="price">Price:</label>
-                                <input type="number" step=".01" name="price" id="price" class="form-control" required></input>
+                                <input type="number" step=".01" name="price" id="price" class="form-control"
+                                    required></input>
                                 <div class="invalid-feedback">
                                     Please insert a price.
                                 </div>
@@ -255,8 +278,7 @@
                     <div class="row g-0 h-100">
                         <div class="position-relative">
                             <img src="https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1xw:0.99967xh;center,top&resize=1200:*"
-                                class="imageURLCard rounded-start w-100 z-1 img-fluid"
-                                alt="Card title" />
+                                class="imageURLCard rounded-start w-100 z-1 img-fluid" alt="Card title" />
                             <div
                                 class="soldTitle h-100 w-100 position-absolute z-2 m-0 bottom-0 d-flex align-items-center justify-content-center">
                                 <p class="bg-dark px-3 py-1 m-0 rounded-5">SOLD</p>
@@ -269,21 +291,29 @@
                                     <span class="descriptionCard descriptionHidden">
 
                                     </span>
-                                    <a id="showDescription" class="text-black text-decoration-none" data-id="${petCode}"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></a>
-                                </p>       
+                                    <a id="showDescription" class="text-black text-decoration-none"
+                                        data-id="${petCode}"><i class="fa fa-arrow-circle-down"
+                                            aria-hidden="true"></i></a>
+                                </p>
                                 <p>
-                                    Price: <span class="priceCard"></span> 
+                                    Price: <span class="priceCard"></span>
                                 </p>
                                 <div class="card-text d-flex justify-content-between">
                                     <small class="text-muted">Birthdate: <span id="birthdateCard"></span>
                                     </small>
                                     <div class="icons">
-                                        <a href="#" data-id="" id="soldIcon" class="ms-2 text-dark"><i class="fa fa-dollar-sign" aria-hidden="true"></i></a>
-                                        <a href="#" data-id="" id="editIcon" class="ms-2 text-dark"><i class="fa fa-edit" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#modalEditPet"></i></a>
-                                        <a href="#" data-id="" id="deleteIcon" class="ms-2 text-dark"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                        <a href="#" data-id="" id="soldIcon" class="ms-2 text-dark"><i
+                                                class="fa fa-dollar-sign" aria-hidden="true"></i></a>
+                                        <a href="#" data-id="" id="editIcon" class="ms-2 text-dark"><i
+                                                class="fa fa-edit" aria-hidden="true" data-bs-toggle="modal"
+                                                data-bs-target="#modalEditPet"></i></a>
+                                        <a href="#" data-id="" id="deleteIcon" class="ms-2 text-dark"><i
+                                                class="fa fa-trash" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
-                                <span class="petCodeCard position-absolute top-0 end-0 p-2 z-3 bg-dark text-warning rounded-start-1" style="--bs-bg-opacity: .5;"></span>
+                                <span
+                                    class="petCodeCard position-absolute top-0 end-0 p-2 z-3 bg-dark text-warning rounded-start-1"
+                                    style="--bs-bg-opacity: .5;"></span>
                             </div>
                         </div>
                     </div>
@@ -292,6 +322,9 @@
         </template>
     </main>
     <footer>
+        <div class="d-flex justify-content-center p-3 bg-black align-items-center ">
+            <h2 class="text-warning text-center m-0">Created by Aitor Gonzalez Barrera</h2>
+        </div>
     </footer>
 </body>
 
