@@ -263,7 +263,6 @@ function renderPets(pets) {
             })
         })
 
-        cardRow.append(card);
 
         //Show description
         const buttonShowDescription = card.querySelector("#showDescription");
@@ -290,6 +289,8 @@ function renderPets(pets) {
                 }
             })
         }
+
+        cardRow.append(card);
     })
 }
 
